@@ -2,16 +2,15 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
-
-# PLACEHOLDER FOR ACTUAL LAPTOP CONFIG!!!!!!
-
+# PLACEHOLDER FOR ACTUAL LAPTOP !!!!!!!!!!!!!!!!!
 
 {
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      inputs.home-manager.nixosModules.default
     ];
 
   # systemd-boot.
@@ -108,6 +107,13 @@
     packages = with pkgs; [
 
     ];
+  };
+
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; };
+    users = {
+      "user" = import /home/user/config/hosts/desktop/home.nix;
+    };
   };
 
   virtualisation.docker.enable = true;

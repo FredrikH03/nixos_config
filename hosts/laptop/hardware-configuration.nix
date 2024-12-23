@@ -3,7 +3,7 @@
 # to /etc/nixos/configuration.nix instead.
 { config, lib, pkgs, modulesPath, ... }:
 
-# PLACEHOLDER FOR ACTUAL LAPTOP CONFIG!!!!!!
+# PLACEHOLDER FOR ACTUAL LAPTOP !!!!!!!!!!!!!!!!!
 
 {
   imports =
