@@ -131,12 +131,10 @@
     neovim
     fastfetch
 
-    input-remapper
     kdePackages.kate
     thunderbird
     steam
     vesktop
-    discord
     brave
     teamspeak3
     mullvad-vpn
