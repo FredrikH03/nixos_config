@@ -11,11 +11,8 @@
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
       ../../modules/bootloader/grub.nix
+      ../../modules/network/bluetooth.nix
     ];
-
-  # systemd-boot.
-  # boot.loader.systemd-boot.enable = true;
-  # boot.loader.efi.canTouchEfiVariables = true;
 
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -29,9 +26,6 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
-  hardware.bluetooth.enable = true; # enables support for Bluetooth
-  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
 
 
   # Set your time zone.
@@ -118,9 +112,9 @@
   # Install firefox.
   programs.firefox.enable = true;
 
-  # programs.steam = {
-  # enable = true;
-  # };
+  programs.steam = {
+  enable = true;
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -139,6 +133,7 @@
     input-remapper
     kdePackages.kate
     thunderbird
+    steam
     vesktop
     discord
     brave
