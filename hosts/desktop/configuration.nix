@@ -12,6 +12,7 @@
       inputs.home-manager.nixosModules.default
       ../../modules/bootloader/grub.nix
       ../../modules/network/bluetooth.nix
+      ../../modules/dev-stack/dev-stack.nix
     ];
 
 
@@ -138,23 +139,11 @@
     discord
     brave
     teamspeak3
-    postman
     mullvad-vpn
     kitty
-    docker
-    docker-client
 
-    # PHP stuff
-    php82
-    php84Packages.composer
-    laravel
-
-    nodejs
-    git
     vscodium
     vscode
-    mysql84
-    mariadb_114
     dbeaver-bin
     jetbrains.datagrip
     pgadmin4-desktopmode
