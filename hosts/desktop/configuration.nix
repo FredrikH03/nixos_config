@@ -100,12 +100,12 @@
  
   environment.systemPackages = with pkgs; [
     vim
-    nerdfonts
     wget
     btop
     neovim
     fastfetch
 
+    nerdfonts
     kdePackages.kate
     thunderbird
     steam
