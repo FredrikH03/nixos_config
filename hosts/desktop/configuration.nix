@@ -10,6 +10,8 @@
       ../../modules/network/bluetooth.nix
       ../../modules/dev-stack/dev-stack.nix
       ../../modules/audio/audio.nix
+      ../../modules/graphics/compositor/wayland.nix
+      ../../modules/graphics/desktop/plasma.nix
     ];
 
 
