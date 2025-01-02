@@ -116,6 +116,7 @@
     jetbrains.datagrip
     pgadmin4-desktopmode
     obs-studio
+    imagemagick
 
   ];
 
