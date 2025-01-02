@@ -6,6 +6,7 @@
     [
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
+      ../../modules/applications/basic-cli-tools.nix
       ../../modules/bootloader/grub.nix
       ../../modules/network/bluetooth.nix
       ../../modules/dev-stack/dev-stack.nix
@@ -114,6 +115,7 @@
     dbeaver-bin
     jetbrains.datagrip
     pgadmin4-desktopmode
+    obs-studio
 
   ];
 
