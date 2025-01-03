@@ -8,7 +8,7 @@
     # PHP stuff
     php83
     php83Packages.composer
-    php83Packages.imagick
+    php83Extensions.imagick
     laravel
 
     nodejs
