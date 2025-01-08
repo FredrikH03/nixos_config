@@ -1,15 +1,20 @@
-{ config, pkgs, inputs, ... }:
+{ config, pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
     postman
     docker
 
-    # PHP stuff
-    php83
+    # PHP with Extensions
+    (pkgs.php83.buildEnv {
+      extensions = ({enabled, all}: enabled ++ (with all; [
+        imagick
+        redis
+      ]));
+    })
     php83Packages.composer
-    php83Extensions.imagick
     laravel
+    redis
 
     nodejs
     git
@@ -17,4 +22,5 @@
     mariadb_114
     pgadmin4-desktopmode
   ];
+
 }

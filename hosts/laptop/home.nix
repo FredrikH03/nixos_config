@@ -15,16 +15,18 @@
   # release notes.
   home.stateVersion = "24.11"; # Please read the comment before changing.
 
+  programs.zsh.enable = true;
+  home.file.".p10k.zsh".text = builtins.readFile ./p10k.zsh;
   # The home.packages option allows you to install Nix packages into your
   # environment.
   nixpkgs.config.allowUnfree = true;
-  home.packages = [
+  home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
 
-    pkgs.jetbrains.rider
-    pkgs.steam
+    zsh-powerlevel10k
+    meslo-lgs-nf
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
