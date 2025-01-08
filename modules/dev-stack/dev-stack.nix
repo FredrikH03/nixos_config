@@ -21,6 +21,8 @@
     mysql84
     mariadb_114
     pgadmin4-desktopmode
+
+    cargo
   ];
 
 }
