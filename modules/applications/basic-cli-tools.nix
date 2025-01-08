@@ -7,5 +7,6 @@
     btop
     neovim
     fastfetch
+    torsocks
   ];
 }

@@ -6,13 +6,19 @@
     [
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
-      ../../modules/bootloader/grub.nix
+      ../../modules/bootloader/systemd-boot.nix
       ../../modules/network/bluetooth.nix
       ../../modules/dev-stack/dev-stack.nix
       ../../modules/audio/audio.nix
       ../../modules/graphics/compositor/wayland.nix
       ../../modules/graphics/desktop/plasma.nix
+      ../../modules/applications/basic-cli-tools.nix
     ];
+
+  swapDevices = [ {
+    device = "/var/lib/swapfile";
+    size = 16*1024;
+    } ];
 
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -86,13 +92,40 @@
 
   services.mullvad-vpn.enable = true;
 
-
-  # Install firefox.
-  programs.firefox.enable = true;
+  programs.firefox = {
+  enable = true;
+  package = pkgs.librewolf;
+  policies = {
+    DisableTelemetry = true;
+    DisableFirefoxStudies = true;
+    Preferences = {
+      # "cookiebanners.service.mode.privateBrowsing" = 2; # Block cookie banners in private browsing
+      # "cookiebanners.service.mode" = 2; # Block cookie banners
+      # "privacy.donottrackheader.enabled" = true;
+      # "privacy.fingerprintingProtection" = true;
+      # "privacy.resistFingerprinting" = true;
+      # "privacy.trackingprotection.emailtracking.enabled" = true;
+      # "privacy.trackingprotection.enabled" = true;
+      # "privacy.trackingprotection.fingerprinting.enabled" = true;
+      # "privacy.trackingprotection.socialtracking.enabled" = true;
+    };
+    ExtensionSettings = {
+      "uBlock0@raymondhill.net" = {
+        install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
+        installation_mode = "force_installed";
+      };
+      "multiaccountcontainers@mozilla.org" = {
+        install_url = "https://addons.mozilla.org/firefox/downloads/file/4355970/multi_account_containers-8.2.0.xpi";
+        installation_mode = "force_installed";
+      };
+    };
+  };
+};
 
   programs.steam = {
   enable = true;
   };
+
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -104,16 +137,24 @@
     thunderbird
     steam
     vesktop
-    brave
-    teamspeak3
     mullvad-vpn
     kitty
+    teamspeak5_client
+    teamspeak3
 
     vscodium
     vscode
     dbeaver-bin
     jetbrains.datagrip
     pgadmin4-desktopmode
+    mpv
+    vlc
+    flatpak
+    discord
+    bitwarden-desktop
+    librewolf
+    tor-browser
+    yt-dlp
 
   ];
 
