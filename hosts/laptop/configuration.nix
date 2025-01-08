@@ -6,6 +6,7 @@
     [
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
+      ../../modules/applications/basic-cli-tools.nix
       ../../modules/bootloader/grub.nix
       ../../modules/network/bluetooth.nix
       ../../modules/dev-stack/dev-stack.nix
@@ -100,20 +101,29 @@
  
   environment.systemPackages = with pkgs; [
     nerdfonts
+    zsh
+    zsh-powerlevel10k
     kdePackages.kate
     thunderbird
     steam
     vesktop
     brave
+    librewolf
     teamspeak3
     mullvad-vpn
     kitty
+    libreoffice-qt
+
 
     vscodium
     vscode
     dbeaver-bin
     jetbrains.datagrip
-    pgadmin4-desktopmode
+    pgadmin4
+    obs-studio
+    imagemagick
+    vlc
+    
 
   ];
 
