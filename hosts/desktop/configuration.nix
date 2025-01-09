@@ -8,13 +8,14 @@
       inputs.home-manager.nixosModules.default
       ../../modules/bootloader/systemd-boot.nix
       ../../modules/network/bluetooth.nix
-      ../../modules/dev-stack/dev-stack.nix
       ../../modules/audio/audio.nix
+
       ../../modules/graphics/compositor/wayland.nix
       ../../modules/graphics/desktop/plasma.nix
 
       ../../modules/applications/basic-cli-tools.nix
       ../../modules/applications/web-browsers.nix
+      ../../modules/applications/dev-stack.nix
     ];
 
   swapDevices = [ {
