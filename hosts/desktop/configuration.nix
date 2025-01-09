@@ -126,8 +126,6 @@
     flatpak
     discord
     bitwarden-desktop
-    librewolf
-    tor-browser
     yt-dlp
 
   ];
