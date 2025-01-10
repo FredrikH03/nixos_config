@@ -23,6 +23,9 @@
     pgadmin4-desktopmode
 
     cargo
+
+    libgcc
+    gcc_debug
   ];
 
 }
