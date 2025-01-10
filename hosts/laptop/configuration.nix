@@ -6,13 +6,16 @@
     [
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
-      ../../modules/applications/basic-cli-tools.nix
       ../../modules/bootloader/grub.nix
       ../../modules/network/bluetooth.nix
-      ../../modules/dev-stack/dev-stack.nix
       ../../modules/audio/audio.nix
+
       ../../modules/graphics/compositor/wayland.nix
       ../../modules/graphics/desktop/plasma.nix
+
+      ../../modules/applications/dev-stack.nix
+      ../../modules/applications/basic-cli-tools.nix
+      ../../modules/applications/web-browsers.nix
     ];
 
 
@@ -108,7 +111,6 @@
     steam
     vesktop
     brave
-    librewolf
     teamspeak3
     mullvad-vpn
     kitty
