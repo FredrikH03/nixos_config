@@ -109,24 +109,31 @@
     kdePackages.kate
     thunderbird
     steam
-    vesktop
-    mullvad-vpn
+    flatpak
     kitty
+
+    #vidyaplayers
+    mpv
+    vlc
+
+    #cringeshit
+    discord
+    vesktop
+
+    #teamspeak
     teamspeak5_client
     teamspeak3
 
+    #im gonna coooooooooode
     vscodium
     vscode
     dbeaver-bin
     jetbrains.datagrip
     pgadmin4-desktopmode
-    mpv
-    vlc
-    flatpak
-    discord
-    bitwarden-desktop
-    yt-dlp
 
+    #securty
+    mullvad-vpn
+    bitwarden-desktop
   ];
 
   fonts.packages = with pkgs; [
