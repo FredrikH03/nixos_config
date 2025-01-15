@@ -13,11 +13,15 @@
       ../../modules/graphics/compositor/wayland.nix
       ../../modules/graphics/desktop/plasma.nix
 
-      ../../modules/applications/dev-stack.nix
       ../../modules/applications/basic-cli-tools.nix
       ../../modules/applications/web-browsers.nix
+      ../../modules/applications/dev-stack.nix
     ];
 
+  swapDevices = [ {
+    device = "/var/lib/swapfile";
+    size = 16*1024;
+    } ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -104,28 +108,26 @@
  
   environment.systemPackages = with pkgs; [
     nerdfonts
-    zsh
-    zsh-powerlevel10k
     kdePackages.kate
     thunderbird
     steam
     vesktop
-    brave
-    teamspeak3
     mullvad-vpn
     kitty
-    libreoffice-qt
-
+    teamspeak5_client
+    teamspeak3
 
     vscodium
     vscode
     dbeaver-bin
     jetbrains.datagrip
-    pgadmin4
-    obs-studio
-    imagemagick
+    pgadmin4-desktopmode
+    mpv
     vlc
-    
+    flatpak
+    discord
+    bitwarden-desktop
+    yt-dlp
 
   ];
 
