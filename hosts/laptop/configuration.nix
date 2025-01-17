@@ -136,6 +136,9 @@
     #securty
     mullvad-vpn
     bitwarden-desktop
+
+    brave
+    firefox
   ];
 
   fonts.packages = with pkgs; [
