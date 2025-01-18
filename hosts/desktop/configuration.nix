@@ -128,6 +128,8 @@
     bitwarden-desktop
     yt-dlp
 
+    libreoffice-qt
+
   ];
 
   fonts.packages = with pkgs; [
