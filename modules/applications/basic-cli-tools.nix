@@ -8,5 +8,6 @@
     neovim
     fastfetch
     torsocks
+    yt-dlp
   ];
 }

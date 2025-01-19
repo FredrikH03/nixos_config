@@ -6,15 +6,22 @@
     [
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
-      ../../modules/applications/basic-cli-tools.nix
       ../../modules/bootloader/grub.nix
       ../../modules/network/bluetooth.nix
-      ../../modules/dev-stack/dev-stack.nix
       ../../modules/audio/audio.nix
+
       ../../modules/graphics/compositor/wayland.nix
       ../../modules/graphics/desktop/plasma.nix
+
+      ../../modules/applications/basic-cli-tools.nix
+      ../../modules/applications/web-browsers.nix
+      ../../modules/applications/dev-stack.nix
     ];
 
+  swapDevices = [ {
+    device = "/var/lib/swapfile";
+    size = 16*1024;
+    } ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -101,30 +108,37 @@
  
   environment.systemPackages = with pkgs; [
     nerdfonts
-    zsh
-    zsh-powerlevel10k
     kdePackages.kate
     thunderbird
     steam
-    vesktop
-    brave
-    librewolf
-    teamspeak3
-    mullvad-vpn
+    flatpak
     kitty
-    libreoffice-qt
 
+    #vidyaplayers
+    mpv
+    vlc
 
+    #cringeshit
+    discord
+    vesktop
+
+    #teamspeak
+    teamspeak5_client
+    teamspeak3
+
+    #im gonna coooooooooode
     vscodium
     vscode
     dbeaver-bin
     jetbrains.datagrip
-    pgadmin4
-    obs-studio
-    imagemagick
-    vlc
-    
+    pgadmin4-desktopmode
 
+    #securty
+    mullvad-vpn
+    bitwarden-desktop
+
+    brave
+    firefox
   ];
 
   fonts.packages = with pkgs; [
