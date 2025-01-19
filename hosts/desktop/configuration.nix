@@ -131,6 +131,8 @@
     jetbrains.datagrip
     pgadmin4-desktopmode
 
+    libreoffice-qt
+
     #securty
     mullvad-vpn
     bitwarden-desktop
