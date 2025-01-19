@@ -132,6 +132,7 @@
     dbeaver-bin
     jetbrains.datagrip
     pgadmin4-desktopmode
+    jetbrains.phpstorm
 
     #securty
     mullvad-vpn
