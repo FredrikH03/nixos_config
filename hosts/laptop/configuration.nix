@@ -113,6 +113,7 @@
     steam
     flatpak
     kitty
+    libreoffice-qt
 
     #vidyaplayers
     mpv

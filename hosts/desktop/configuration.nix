@@ -111,6 +111,7 @@
     steam
     flatpak
     kitty
+    libreoffice-qt
 
     #vidyaplayers
     mpv
@@ -130,8 +131,7 @@
     dbeaver-bin
     jetbrains.datagrip
     pgadmin4-desktopmode
-
-    libreoffice-qt
+    jetbrains.phpstorm
 
     #securty
     mullvad-vpn
