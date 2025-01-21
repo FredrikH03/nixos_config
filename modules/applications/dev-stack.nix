@@ -26,6 +26,10 @@
 
     libgcc
     gcc_debug
+
+
+    dotnet-sdk
+    # dotnet-sdk_7 # apparently EOL
   ];
 
 }
