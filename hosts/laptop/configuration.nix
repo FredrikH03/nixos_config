@@ -75,7 +75,7 @@
   users.users.user = {
     isNormalUser = true;
     description = "user";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "docker"];
     packages = with pkgs; [
 
     ];
