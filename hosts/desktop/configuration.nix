@@ -20,8 +20,10 @@
 
   swapDevices = [ {
     device = "/var/lib/swapfile";
-    size = 16*1024;
+    size = 38*1024;
     } ];
+    
+  boot.supportedFilesystems = [ "nfts" ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -98,6 +100,8 @@
   programs.steam = {
   enable = true;
   };
+
+  services.flatpak.enable = true;
 
 
   # Allow unfree packages
