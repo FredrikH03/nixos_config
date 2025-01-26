@@ -23,7 +23,6 @@
     size = 38*1024;
     } ];
     
-  boot.supportedFilesystems = [ "nfts" ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -116,6 +115,7 @@
     flatpak
     kitty
     libreoffice-qt
+    obs-studio
 
     #vidyaplayers
     mpv
