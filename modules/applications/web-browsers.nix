@@ -36,5 +36,6 @@
   mullvad-browser
   librewolf 
   tor-browser
+  brave
   ];
 }
