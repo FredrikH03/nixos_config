@@ -20,13 +20,16 @@
 
   swapDevices = [ {
     device = "/var/lib/swapfile";
-    size = 16*1024;
+    size = 24*1024;
     } ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   nix.settings.experimental-features = [ "nix-command" "flakes"];
+
+  hardware.trackpoint.device = "TPPS/2 Elan TrackPoint";
+  hardware.trackpoint.enable = true;
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -114,6 +117,7 @@
     flatpak
     kitty
     libreoffice-qt
+    obs-studio
 
     #vidyaplayers
     mpv
