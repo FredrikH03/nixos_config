@@ -106,6 +106,10 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+ services.ollama = {
+   enable = true;
+   acceleration = "rocm";
+ };
  
   environment.systemPackages = with pkgs; [
     nerdfonts
@@ -116,6 +120,9 @@
     kitty
     libreoffice-qt
     obs-studio
+    ollama
+    ollama-rocm
+    btrfs-progs
 
     #vidyaplayers
     mpv
