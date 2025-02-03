@@ -123,6 +123,7 @@
     ollama
     ollama-rocm
     btrfs-progs
+    ckan
 
     #vidyaplayers
     mpv
