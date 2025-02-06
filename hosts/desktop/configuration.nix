@@ -18,6 +18,7 @@
       ../../modules/applications/dev-stack.nix
     ];
 
+  boot.initrd.systemd.enable = true;
   swapDevices = [ {
     device = "/var/lib/swapfile";
     size = 38*1024;
