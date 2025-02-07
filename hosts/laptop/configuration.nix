@@ -6,7 +6,7 @@
     [
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.default
-      ../../modules/bootloader/grub.nix
+      ../../modules/bootloader/systemd-boot.nix
       ../../modules/network/bluetooth.nix
       ../../modules/audio/audio.nix
 
@@ -18,6 +18,7 @@
       ../../modules/applications/dev-stack.nix
     ];
 
+  boot.initrd.systemd.enable = true;
   swapDevices = [ {
     device = "/var/lib/swapfile";
     size = 24*1024;
