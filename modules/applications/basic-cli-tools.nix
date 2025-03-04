@@ -9,5 +9,8 @@
     fastfetch
     torsocks
     yt-dlp
+    ripgrep
+    vifm
+    cool-retro-term
   ];
 }

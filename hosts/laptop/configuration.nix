@@ -119,6 +119,7 @@
     kitty
     libreoffice-qt
     obs-studio
+    usbutils
 
     #vidyaplayers
     mpv
