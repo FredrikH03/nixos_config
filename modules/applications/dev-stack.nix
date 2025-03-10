@@ -17,6 +17,7 @@
     redis
 
     nodejs
+    nodePackages.serve
     git
     pgadmin4-desktopmode
 
