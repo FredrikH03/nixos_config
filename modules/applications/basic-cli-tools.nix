@@ -2,6 +2,10 @@
 
 {
   environment.systemPackages = with pkgs; [
+    cool-retro-term
+    alacritty
+    kitty
+
     vim
     wget
     btop
@@ -11,6 +15,5 @@
     yt-dlp
     ripgrep
     vifm
-    cool-retro-term
   ];
 }

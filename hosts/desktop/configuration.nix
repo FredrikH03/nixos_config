@@ -118,7 +118,6 @@
     thunderbird
     steam
     flatpak
-    kitty
     libreoffice-qt
     obs-studio
     ollama

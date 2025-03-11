@@ -117,7 +117,6 @@
     brave
     teamspeak3
     mullvad-vpn
-    kitty
 
     vscodium
     vscode
