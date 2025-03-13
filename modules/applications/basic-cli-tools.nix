@@ -14,5 +14,7 @@
     yt-dlp
     ripgrep
     vifm
+    tmux
+    tmuxPlugins.resurrect
   ];
 }
