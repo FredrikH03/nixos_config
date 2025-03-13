@@ -118,13 +118,15 @@
     thunderbird
     steam
     flatpak
-    kitty
     libreoffice-qt
     obs-studio
     ollama
     ollama-rocm
     btrfs-progs
     ckan
+    r2modman
+    gamemode
+    openrgb
 
     #vidyaplayers
     mpv

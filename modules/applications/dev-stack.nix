@@ -17,10 +17,12 @@
     redis
 
     nodejs
+    nodePackages.serve
     git
-    mysql84
-    mariadb_114
     pgadmin4-desktopmode
+
+    # mysql84
+    # mariadb_114
 
     cargo
 

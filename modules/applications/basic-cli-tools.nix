@@ -2,6 +2,9 @@
 
 {
   environment.systemPackages = with pkgs; [
+    cool-retro-term
+    alacritty
+
     vim
     wget
     btop
@@ -9,5 +12,9 @@
     fastfetch
     torsocks
     yt-dlp
+    ripgrep
+    vifm
+    tmux
+    tmuxPlugins.resurrect
   ];
 }
