@@ -124,6 +124,9 @@
     ollama-rocm
     btrfs-progs
     ckan
+    r2modman
+    gamemode
+    openrgb
 
     #vidyaplayers
     mpv
