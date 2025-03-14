@@ -35,7 +35,7 @@
   environment.systemPackages = with pkgs; [
     mullvad-browser
     librewolf 
-    tor-browser 
-    brave # literally a honeypot
+    tor-browser
+    brave # botnet
   ];
 }
