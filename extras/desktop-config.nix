@@ -2,6 +2,11 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
+
+# just an extra backup I made just in case i need some of the uncommented stuff or comments or wahtever, might put an original config file too, just as a fallback
+
+# wackadack
+
 { config, pkgs, inputs, ... }:
 
 
