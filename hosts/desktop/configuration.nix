@@ -77,7 +77,7 @@
   users.users.user = {
     isNormalUser = true;
     description = "user";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "gamemode"];
     packages = with pkgs; [
 
     ];
@@ -107,10 +107,12 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
- services.ollama = {
-   enable = true;
-   acceleration = "rocm";
- };
+  services.ollama = {
+    enable = true;
+    acceleration = "rocm";
+  };
+
+  programs.gamemode.enable = true;
  
   environment.systemPackages = with pkgs; [
     nerdfonts
@@ -127,6 +129,7 @@
     r2modman
     gamemode
     openrgb
+    protonup-qt
 
     #vidyaplayers
     mpv
