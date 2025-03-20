@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ... }:
 
 {
-  # grub stuff
+  # grub stuff, sadly never got it working with LUKS2 because some argon2id problem or something
   boot.loader.systemd-boot.enable = false;
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "nodev";

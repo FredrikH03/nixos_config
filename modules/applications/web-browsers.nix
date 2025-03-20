@@ -33,9 +33,9 @@
   };
 
   environment.systemPackages = with pkgs; [
-  mullvad-browser
-  librewolf 
-  tor-browser
-  brave
+    mullvad-browser
+    librewolf 
+    tor-browser
+    brave # botnet
   ];
 }
