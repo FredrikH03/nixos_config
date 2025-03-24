@@ -7,7 +7,7 @@ let
     version = "3.28.1";
     src = pkgs.fetchzip {
       url = "https://downloads.wordpress.org/plugin/elementor.${version}.zip";
-      hash = "sha256-7K/338e8bb81ba6ecf3f1de212b5b700058e064e8f45c5e962f43911a84a7ec6b93";
+      hash = "sha256-bdJ7MT9C2lQlOMywHOwXu3GCHX2vzaGKLvXZfwlHtsI=";
     }; 
     installPhase = ''
       mkdir -p $out/share/wordpress/wp-content/plugins/elementor
