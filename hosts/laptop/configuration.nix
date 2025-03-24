@@ -24,7 +24,7 @@
   swapDevices = [ {
     device = "/var/lib/swapfile";
     size = 24*1024;
-    } ];
+  } ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -85,13 +85,18 @@
   programs.firefox.enable = true;
 
   programs.steam = {
-  enable = true;
+    enable = true;
   };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
- 
+
+  services.vsftpd = {
+    enable = true;
+  };
+
+
   environment.systemPackages = with pkgs; [
     nerdfonts
     kdePackages.kate
@@ -101,6 +106,7 @@
     libreoffice-qt
     obs-studio
     usbutils
+    wordpress
 
     #vidyaplayers
     mpv
@@ -131,10 +137,10 @@
   ];
 
   fonts.packages = with pkgs; [
-  noto-fonts
-  noto-fonts-cjk-sans
-  noto-fonts-color-emoji
-  nerdfonts
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-color-emoji
+    nerdfonts
   ];
   
 
