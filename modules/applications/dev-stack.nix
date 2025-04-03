@@ -21,8 +21,9 @@
     git
     pgadmin4-desktopmode
 
-    # mysql84
-    # mariadb_114
+    mysql84
+
+    vsftpd
 
     cargo
 
@@ -31,7 +32,6 @@
 
 
     dotnet-sdk
-    # dotnet-sdk_7 # apparently EOL
   ];
 
 }
