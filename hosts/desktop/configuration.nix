@@ -98,7 +98,7 @@
 
 
   programs.steam = {
-  enable = true;
+    enable = true;
   };
 
   services.flatpak.enable = true;
