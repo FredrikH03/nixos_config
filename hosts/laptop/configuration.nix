@@ -4,7 +4,7 @@
 {
   imports =
     [
-      ./hardware-configuration.nix
+      /etc/nixos/hardware-configuration.nix
       inputs.home-manager.nixosModules.default
       ../../modules/bootloader/systemd-boot.nix
       ../../modules/network/bluetooth.nix
@@ -18,6 +18,7 @@
       ../../modules/applications/dev-stack.nix
       # ../../modules/applications/wordpress.nix
 
+      ../../modules/user/default.nix
       ../../modules/region/default.nix
     ];
 
@@ -57,24 +58,6 @@
 
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.user = {
-    isNormalUser = true;
-    description = "user";
-    extraGroups = [ "networkmanager" "wheel" "libvirtd" "docker"];
-    packages = with pkgs; [
-
-    ];
-  };
-
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; };
-    users = {
-      "user" = import ./home.nix;
-    };
-  };
-
 
   virtualisation.docker.enable = true;
 
