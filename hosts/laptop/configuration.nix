@@ -16,13 +16,16 @@
       ../../modules/applications/basic-cli-tools.nix
       ../../modules/applications/web-browsers.nix
       ../../modules/applications/dev-stack.nix
+      # ../../modules/applications/wordpress.nix
+
+      ../../modules/region/default.nix
     ];
 
   boot.initrd.systemd.enable = true;
   swapDevices = [ {
     device = "/var/lib/swapfile";
     size = 24*1024;
-    } ];
+  } ];
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -38,26 +41,6 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
-
-  # Set your time zone.
-  time.timeZone = "Europe/Stockholm";
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_GB.UTF-8";
-
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "sv_SE.UTF-8";
-    LC_IDENTIFICATION = "sv_SE.UTF-8";
-    LC_MEASUREMENT = "sv_SE.UTF-8";
-    LC_MONETARY = "sv_SE.UTF-8";
-    LC_NAME = "sv_SE.UTF-8";
-    LC_NUMERIC = "sv_SE.UTF-8";
-    LC_PAPER = "sv_SE.UTF-8";
-    LC_TELEPHONE = "sv_SE.UTF-8";
-    LC_TIME = "sv_SE.UTF-8";
-  };
-
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -103,13 +86,18 @@
   programs.firefox.enable = true;
 
   programs.steam = {
-  enable = true;
+    enable = true;
   };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
- 
+
+  services.vsftpd = {
+    enable = true;
+  };
+
+
   environment.systemPackages = with pkgs; [
     nerdfonts
     kdePackages.kate
@@ -119,6 +107,7 @@
     libreoffice-qt
     obs-studio
     usbutils
+    wordpress
 
     #vidyaplayers
     mpv
@@ -149,10 +138,10 @@
   ];
 
   fonts.packages = with pkgs; [
-  noto-fonts
-  noto-fonts-cjk-sans
-  noto-fonts-color-emoji
-  nerdfonts
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-color-emoji
+    nerdfonts
   ];
   
 
