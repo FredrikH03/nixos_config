@@ -16,7 +16,7 @@
       ../../modules/applications/basic-cli-tools.nix
       ../../modules/applications/web-browsers.nix
       ../../modules/applications/dev-stack.nix
-      ../../modules/applications/wordpress.nix
+      # ../../modules/applications/wordpress.nix
 
       ../../modules/region/default.nix
     ];

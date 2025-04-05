@@ -1,6 +1,5 @@
 { config, pkgs, inputs, ... }:
 
-
 let 
   elementor-manual = pkgs.stdenv.mkDerivation rec {
     name = "elementor";
@@ -10,19 +9,18 @@ let
       hash = "sha256-bdJ7MT9C2lQlOMywHOwXu3GCHX2vzaGKLvXZfwlHtsI=";
     }; 
     installPhase = ''
-      mkdir -p $out/share/wordpress/wp-content/plugins/elementor
-      cp -R * $out/share/wordpress/wp-content/plugins/elementor
+      mkdir -p $out
+      cp -R * $out/
     '';
   };
-in {
 
+in {
   environment.systemPackages = with pkgs; [
     wordpress
   ];
-
   services.wordpress.sites."localhost" = {
     plugins = {
-      inherit elementor-manual;
+      elementor = elementor-manual;
     };
   };
 }
