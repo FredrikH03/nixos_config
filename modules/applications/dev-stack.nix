@@ -25,10 +25,12 @@
 
     vsftpd
 
+    rustc
     cargo
 
     libgcc
     gcc_debug
+    gnumake
 
 
     dotnet-sdk

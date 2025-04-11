@@ -1,0 +1,4 @@
+
+alias gi="git init && git add . && git commit -m 'Initial Commit'"
+
+alias nix-d="nix-collect-garbage -d --delete-older-than 10d"
