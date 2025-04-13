@@ -31,6 +31,7 @@
     libgcc
     gcc_debug
     gnumake
+    # libpq
 
 
     dotnet-sdk
