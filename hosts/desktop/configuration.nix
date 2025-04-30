@@ -72,6 +72,7 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
+
   services.ollama = {
     enable = true;
     acceleration = "rocm";
@@ -96,6 +97,10 @@
     openrgb
     protonup-qt
     ungoogled-chromium
+    chromium
+    multiviewer-for-f1
+    mangohud
+    ferium
 
     #vidyaplayers
     mpv
