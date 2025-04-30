@@ -1,10 +1,14 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
+let 
+  unstable = import inputs.nixpkgs-unstable {
+    system = pkgs.system;
+    config = config.nixpkgs.config;
+  };
+in
 {
   environment.systemPackages = with pkgs; [
-    postman
-    docker
-
+    /*
     # PHP with Extensions
     (pkgs.php83.buildEnv {
       extensions = ({enabled, all}: enabled ++ (with all; [
@@ -18,23 +22,31 @@
 
     nodejs
     nodePackages.serve
-    git
-    pgadmin4-desktopmode
 
     mysql84
 
     vsftpd
 
     rustc
-    cargo
 
     libgcc
     gcc_debug
+    postgresql_17
     gnumake
-    # libpq
+    unstable.libpq
 
+    cargo
 
     dotnet-sdk
+    sqlite
+    postgresql
+    */
+
+    pgadmin4-desktopmode
+    git
+    postman
+    docker
+
   ];
 
 }
