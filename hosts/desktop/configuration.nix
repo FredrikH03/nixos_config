@@ -59,6 +59,12 @@
 
   virtualisation.docker.enable = true;
 
+  programs.hyprland = {
+    # Install the packages from nixpkgs
+    enable = true;
+    # Whether to enable XWayland
+    xwayland.enable = true;
+  };
 
   services.mullvad-vpn.enable = true;
 
@@ -101,6 +107,7 @@
     multiviewer-for-f1
     mangohud
     ferium
+    kitty
 
     #vidyaplayers
     mpv

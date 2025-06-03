@@ -39,13 +39,14 @@ in
 
     dotnet-sdk
     sqlite
-    postgresql
     */
 
+    postgresql
     pgadmin4-desktopmode
     git
     postman
     docker
+    ngrok
 
   ];
 
