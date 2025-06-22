@@ -4,18 +4,18 @@
 {
   imports =
     [
-      ./hardware-configuration.nix
-      inputs.home-manager.nixosModules.default
-      ../../modules/bootloader/systemd-boot.nix
+      ./hardware_configuration.nix
+      inputs.home_manager.nixosModules.default
+      ../../modules/bootloader/systemd_boot.nix
       ../../modules/network/bluetooth.nix
       ../../modules/audio/audio.nix
 
       ../../modules/graphics/compositor/wayland.nix
       ../../modules/graphics/desktop/plasma.nix
 
-      ../../modules/applications/basic-cli-tools.nix
-      ../../modules/applications/web-browsers.nix
-      ../../modules/applications/dev-stack.nix
+      ../../modules/applications/basic_cli_tools.nix
+      ../../modules/applications/web_browsers.nix
+      ../../modules/applications/dev_stack.nix
       # ../../modules/applications/wordpress.nix
 
       ../../modules/user/default.nix

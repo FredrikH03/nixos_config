@@ -16,5 +16,6 @@
     vifm
     tmux
     tmuxPlugins.resurrect
+    nvtopPackages.full
   ];
 }

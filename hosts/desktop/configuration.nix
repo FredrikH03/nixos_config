@@ -4,18 +4,18 @@
 {
   imports =
     [
-      ./hardware-configuration.nix
+      ./hardware_configuration.nix
       inputs.home-manager.nixosModules.default
-      ../../modules/bootloader/systemd-boot.nix
+      ../../modules/bootloader/systemd_boot.nix
       ../../modules/network/bluetooth.nix
       ../../modules/audio/audio.nix
 
       ../../modules/graphics/compositor/wayland.nix
       ../../modules/graphics/desktop/plasma.nix
 
-      ../../modules/applications/basic-cli-tools.nix
-      ../../modules/applications/web-browsers.nix
-      ../../modules/applications/dev-stack.nix
+      ../../modules/applications/basic_cli_tools.nix
+      ../../modules/applications/web_browsers.nix
+      ../../modules/applications/dev_stack.nix
 
       ../../modules/user/default.nix
       ../../modules/region/default.nix
@@ -85,6 +85,9 @@
   };
 
   programs.gamemode.enable = true;
+  programs.gamescope.enable = true;
+  programs.steam.gamescopeSession.enable = true;
+
  
   environment.systemPackages = with pkgs; [
     nerdfonts
@@ -102,12 +105,11 @@
     gamemode
     openrgb
     protonup-qt
-    ungoogled-chromium
-    chromium
     multiviewer-for-f1
     mangohud
-    ferium
     kitty
+    prismlauncher
+    ferium
 
     #vidyaplayers
     mpv
