@@ -90,7 +90,6 @@
 
  
   environment.systemPackages = with pkgs; [
-    nerdfonts
     kdePackages.kate
     thunderbird
     steam
@@ -137,10 +136,10 @@
   ];
 
   fonts.packages = with pkgs; [
-  noto-fonts
-  noto-fonts-cjk-sans
-  noto-fonts-color-emoji
-  nerdfonts
+    noto-fonts
+    noto-fonts-cjk-sans
+    noto-fonts-color-emoji
+    nerd-fonts.droid-sans-mono
   ];
   
 
