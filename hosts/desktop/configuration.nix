@@ -88,6 +88,7 @@
   programs.gamescope.enable = true;
   programs.steam.gamescopeSession.enable = true;
 
+
  
   environment.systemPackages = with pkgs; [
     kdePackages.kate
@@ -109,6 +110,8 @@
     kitty
     prismlauncher
     ferium
+    lutris
+    corectrl
 
     #vidyaplayers
     mpv
