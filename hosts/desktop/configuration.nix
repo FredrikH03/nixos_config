@@ -116,7 +116,6 @@
     wineWowPackages.stable
     winetricks
 
-    bottles
 
     #vidyaplayers
     mpv
