@@ -113,6 +113,11 @@
     lutris
     corectrl
 
+    wineWowPackages.stable
+    winetricks
+
+    bottles
+
     #vidyaplayers
     mpv
     vlc
