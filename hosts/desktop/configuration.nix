@@ -12,6 +12,7 @@
 
       ../../modules/graphics/compositor/wayland.nix
       ../../modules/graphics/desktop/plasma.nix
+      ../../modules/hyprland/hyprland.nix
 
       ../../modules/applications/basic_cli_tools.nix
       ../../modules/applications/web_browsers.nix
@@ -19,6 +20,8 @@
 
       ../../modules/user/default.nix
       ../../modules/region/default.nix
+
+      ../../modules/vm/vfio.nix
 
     ];
 
@@ -59,12 +62,6 @@
 
   virtualisation.docker.enable = true;
 
-  programs.hyprland = {
-    # Install the packages from nixpkgs
-    enable = true;
-    # Whether to enable XWayland
-    xwayland.enable = true;
-  };
 
   services.mullvad-vpn.enable = true;
 

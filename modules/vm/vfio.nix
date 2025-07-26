@@ -1,9 +1,23 @@
 { config, pkgs, inputs, ... }:
 
 {
+  boot.initrd.kernelModules = [ "vfio_pci" ];
+
+  boot.initrd.systemd.services.vfio-bind = {
+    description = "Bind Vega 56 to vfio-pci";
+    after = [ "systemd-udevd.service" ];
+    wantedBy = [ "initrd.target" ];
+    serviceConfig = {
+      Type = "oneshot";
+      ExecStart = ''
+        /bin/sh -c 'echo 1002 687f > /sys/bus/pci/drivers/vfio-pci/new_id'
+        /bin/sh -c 'echo 1002 aaf8 > /sys/bus/pci/drivers/vfio-pci/new_id'
+      '';
+    };
+  };
+
   boot.kernelParams = [
   "amd_iommu=on"
-  "iommu=pt"
   "vfio-pci.ids=1002:687f,1002:aaf8"
   ];
 
