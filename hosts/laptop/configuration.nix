@@ -5,7 +5,7 @@
   imports =
     [
       ./hardware_configuration.nix
-      inputs.home_manager.nixosModules.default
+      inputs.home-manager.nixosModules.default
       ../../modules/bootloader/systemd_boot.nix
       ../../modules/network/bluetooth.nix
       ../../modules/audio/audio.nix
