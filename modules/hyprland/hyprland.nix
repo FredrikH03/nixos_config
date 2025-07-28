@@ -11,5 +11,7 @@
 
   environment.systemPackages = with pkgs; [
     waybar
+    wofi
+    walker
   ];
 }
