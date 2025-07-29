@@ -11,7 +11,14 @@
 
   environment.systemPackages = with pkgs; [
     waybar
+    hyprpanel
     wofi
     walker
+    hyprpicker
+    pywal
+    blueman
+    bluez
+    networkmanager
+    swaynotificationcenter
   ];
 }
