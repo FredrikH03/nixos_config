@@ -19,6 +19,6 @@
     blueman
     bluez
     networkmanager
-    swaynotificationcenter
+    # swaynotificationcenter
   ];
 }
