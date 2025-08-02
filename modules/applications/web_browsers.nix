@@ -95,6 +95,9 @@
           "browser.newtabpage.activity-stream.showSponsored" = lock-false;
           "browser.newtabpage.activity-stream.system.showSponsored" = lock-false;
           "browser.newtabpage.activity-stream.showSponsoredTopSites" = lock-false;
+          "general.useragent.override" = { Value = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:118.0) Gecko/20100101 Firefox/140.0"; Status = "locked"; }; 
+          "general.oscpu.override" = { Value = "Windows NT 10.0"; Status = "locked"; }; 
+          "general.platform.override" = { Value = "Win64"; Status = "locked"; }; 
         };
       };
     };
