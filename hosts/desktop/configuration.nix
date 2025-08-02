@@ -88,6 +88,8 @@
 
  
   environment.systemPackages = with pkgs; [
+    protontricks
+    nexusmods-app
     kdePackages.kate
     thunderbird
     steam
