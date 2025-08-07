@@ -88,6 +88,7 @@
 
  
   environment.systemPackages = with pkgs; [
+    protonmail-desktop
     protontricks
     nexusmods-app
     kdePackages.kate
